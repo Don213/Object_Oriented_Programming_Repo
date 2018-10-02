@@ -4,13 +4,37 @@ public class Food implements Cloneable
     private String productName;
     private String units;
 
+    private static Food singletonObj;
 
-    public Food(String brandIn, String productNameIn, String unitsIn)
+
+
+    //2-a
+    //Private Constructor
+    private Food()
     {
-        brand = brandIn;
-        productName = productNameIn;
-        units = unitsIn;
+
     }
+
+
+
+    //2-b
+    //The method that gets the only instance of the singleton class, Food
+    public static Food getInstance()
+    {
+        if(singletonObj == null) {
+            singletonObj = new Food();
+        }
+            return singletonObj;
+    }
+
+
+
+
+
+
+
+
+
 
     public void setBrand(String brandIn)
     {
@@ -42,15 +66,16 @@ public class Food implements Cloneable
         return units;
     }
 
-    //1-2-a
+
+
+
+
+    ////////////////////////////////////////
+    //My methods
     public String getName()
     {
         return "Food";
     }
-
-
-    //My methods
-
 
     public String toString()
     {
@@ -58,25 +83,14 @@ public class Food implements Cloneable
                 + ", " + "Units: " + getUnits() + "]");
     }
 
-
-
-
-
-
-
-
-
-
-
+    ////////////////////////////////////////////////////////
     //This method returns true if the two Food objects are equal
     public boolean equals(Food pf)
     {
-        //1-3-a (superclass checks for the same object)
         if(pf == null || getClass() != pf.getClass())
         {
             return false;
         }
-        //1-3-b
         Food food = (Food)pf;
 
         if (getBrand().equals(food.getBrand())
@@ -88,16 +102,6 @@ public class Food implements Cloneable
         else {return false;}
     }
 
-
-
-
-
-    //This method returns a clone of the current object
-    public Food clone() throws CloneNotSupportedException
-    {
-        //1-4-b
-        return (Food)super.clone();
-    }
 
 
 
