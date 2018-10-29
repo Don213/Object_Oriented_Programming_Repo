@@ -63,11 +63,6 @@ public class Food implements Cloneable
 
 
 
-
-
-
-
-
     //This method returns true if the two Food objects are equal
     public boolean equals(Food pf)
     {
