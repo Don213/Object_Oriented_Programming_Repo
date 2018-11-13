@@ -1,14 +1,18 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.*;       // Using layouts
+import java.awt.event.*; // Using AWT event classes and listener interfaces
+import javax.swing.*;    // Using Swing components and containers
+import javax.swing.border.EmptyBorder;
 
-
-public class MainTest2 extends Frame implements KeyListener{
+public class MainTest2 extends Frame implements KeyListener {
 
     private TextField tfInput;  // Single-line TextField to receive tfInput key
     private TextArea taDisplay; // Multi-line TextArea to taDisplay result
 
-    private JTextField tfInput2, tfOutput;
+
+    //private Panel panel = new Panel();
+    //private JFrame frame = new JFrame();
+
+    private JTextField tfInput2, tfOutput2;
     private int sum = 0;    // accumulated sum, init to 0
 
 
@@ -24,68 +28,41 @@ public class MainTest2 extends Frame implements KeyListener{
         tfInput.addKeyListener(this);
         // tfInput TextField (source) fires KeyEvent.
         // tfInput adds "this" object as a KeyEvent listener.
-
-        setTitle("KeyEvent Demo"); // "super" Frame sets title
-        setSize(400, 200);         // "super" Frame sets initial size
-        setVisible(true);          // "super" Frame shows
-    }
-
-
-    MainTest2(int one) {
-
-
-        Container frame = new JFrame("A Simple GUI");
-        frame.setVisible(true);
-        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        frame.setLocation(430, 100);
-
-        JPanel panel = new JPanel();
-
-        frame.add(panel);
+        ////////////////////////////////////////////////////////////////////////////
 
         JLabel lbl = new JLabel("Select one of the possible choices and click OK");
         lbl.setVisible(true);
 
-        panel.add(lbl);
 
-        String[] choices = {"CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6"};
+
+        String[] choices = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"};
 
         Choice choice = new Choice();
-        choice.setName("Choices");
         choice.add(choices[0]);
-        choice.add(choices[1]);
         choice.add(choices[2]);
         choice.add(choices[3]);
         choice.add(choices[4]);
         choice.add(choices[5]);
-        panel.add(choice);
+
+
+
 
         final JComboBox<String> cb = new JComboBox<String>(choices);
+
         cb.setVisible(true);
-        panel.add(cb);
 
-        JButton btn = new JButton("OK");
-        panel.add(btn);
+        ////////////////////////////////////////////////////////////////////////////
 
+        Panel cp = new Panel();
+        cp.setLayout(new GridLayout(2, 2, 5, 5));  // The content-pane sets its layout
 
-        // Retrieve the content-pane of the top-level container JFrame
-        // All operations done on the content-pane
-        //Container cp = getContentPane();
-        //Panel panel2 = new Panel();
-        //frame.add(panel2);
-
-        Panel panel2 = new Panel();
-        panel.add(panel2);
-        panel2.setLayout(new GridLayout(2, 2, 5, 5));  // The content-pane sets its layout
-
-        panel2.add(new JLabel("Enter an Integer: "));
+        cp.add(new JLabel("Enter an Integer: "));
         tfInput2 = new JTextField(10);
-        panel2.add(tfInput);
-        panel2.add(new JLabel("The Accumulated Sum is: "));
-        tfOutput = new JTextField(10);
-        tfOutput.setEditable(false);  // read-only
-        panel2.add(tfOutput);
+        cp.add(tfInput2);
+        cp.add(new JLabel("The Accumulated Sum is: "));
+        tfOutput2 = new JTextField(10);
+        tfOutput2.setEditable(false);  // read-only
+        cp.add(tfOutput2);
 
         // Allocate an anonymous instance of an anonymous inner class that
         //  implements ActionListener as ActionEvent listener
@@ -93,35 +70,70 @@ public class MainTest2 extends Frame implements KeyListener{
             @Override
             public void actionPerformed(ActionEvent evt) {
                 // Get the String entered into the input TextField, convert to int
-                int numberIn = Integer.parseInt(tfInput.getText());
+                int numberIn = Integer.parseInt(tfInput2.getText());
                 sum += numberIn;      // accumulate numbers entered into sum
-                tfInput.setText("");  // clear input TextField
-                tfOutput.setText(sum + ""); // display sum on the output TextField
+                tfInput2.setText("");  // clear input TextField
+                tfOutput2.setText(sum + ""); // display sum on the output TextField
             }
         });
 
-        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Exit program if close-window button clicked
-        setTitle("Swing Accumulator"); // "super" Frame sets title
-        setSize(350, 120);  // "super" Frame sets initial size
-        setVisible(true);   // "super" Frame shows
+
+
+
+
+
+
+
+
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////
+
+
+        JPanel container1 = new JPanel();
+        JPanel container2 = new JPanel();
+        JPanel container3 = new JPanel();
+
+        container1.add(cp);
+        container2.add(choice);
+        container2.add(lbl);
+
+
+        add(container1,BorderLayout.NORTH);
+        add(container3,BorderLayout.CENTER);
+        add(container2,BorderLayout.PAGE_END);
+        setTitle("Consolidated item frame"); // "super" Frame sets title
+        setSize(600, 400);         // "super" Frame sets initial size
+        setVisible(true);          // "super" Frame shows
+
+
+
     }
 
 
-    public static void main(String[] args)
-    {
-        MainTest2();
-        MainTest2(1);
-        //new KeyEventDemo();
+    public static void main(String[] args) {
+        new MainTest2();
     }
 
 
-    /** KeyEvent handlers */
-    // Called back when a key has been typed (pressed and released)
+    /**
+     * KeyEvent handlers
+     */
+// Called back when a key has been typed (pressed and released)
     @Override
     public void keyTyped(KeyEvent evt) {
         taDisplay.append("You have typed " + evt.getKeyChar() + "\n");
     }
+
     // Not Used, but need to provide an empty body for compilation
-    @Override public void keyPressed(KeyEvent evt) { }
-    @Override public void keyReleased(KeyEvent evt) { }
+    @Override
+    public void keyPressed(KeyEvent evt) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent evt) {
+    }
+
 }

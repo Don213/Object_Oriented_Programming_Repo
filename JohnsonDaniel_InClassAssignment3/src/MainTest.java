@@ -1,9 +1,9 @@
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.*;       // Using layouts
+import java.awt.event.*; // Using AWT event classes and listener interfaces
+import javax.swing.*;    // Using Swing components and containers
 
 
-public class MainTest extends Frame{
 
-
+class MainTest extends JFrame{
 
 }

@@ -1,10 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 
-
-import javax.swing.*;
-
-
 // An AWT GUI program inherits the top-level container java.awt.Frame
 public class AWTBorderLayoutDemo extends Frame {
     private Button btnNorth, btnSouth, btnCenter, btnEast, btnWest;
