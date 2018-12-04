@@ -2,28 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="555ce213-d1bd-40d2-8f11-0e2ea27e5626" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$divide.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$divide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$eight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$eight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$equals.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$equals.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$five.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$five.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$four.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$four.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$minus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$minus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$multiply.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$multiply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$nine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$nine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$one.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$one.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$plus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$plus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$reset.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$seven.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$seven.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$six.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$six.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$three.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$three.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$two.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$two.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$zero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$zero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JohnsonDaniel_HW2_3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../JohnsonDaniel_HW2_3/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$divide.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$eight.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$equals.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$five.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$four.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$minus.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$multiply.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$nine.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$one.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$plus.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$reset.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$seven.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$six.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$three.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$two.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$zero.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Monopoly/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Battleship.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Boot.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Dice_1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Dice_2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Dice_3.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Dice_4.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Dice_5.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Dice_6.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Monopoly_Game_Board.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Racecar.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Thimble.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Monopoly _Pics/Top_Hat.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/Text_Files/squares.txt" afterPath="$PROJECT_DIR$/../Monopoly/Text_Files/squares.txt" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/BuyableSquare.java" afterPath="$PROJECT_DIR$/../Monopoly/src/BuyableSquare.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/Card.java" afterPath="$PROJECT_DIR$/../Monopoly/src/Card.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/MainExecutable.java" afterPath="$PROJECT_DIR$/../Monopoly/src/MainExecutable.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/Monopoly.java" afterPath="$PROJECT_DIR$/../Monopoly/src/Monopoly.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/Player.java" afterPath="$PROJECT_DIR$/../Monopoly/src/Player.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/PropertySquare.java" afterPath="$PROJECT_DIR$/../Monopoly/src/PropertySquare.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/RailroadSquare.java" afterPath="$PROJECT_DIR$/../Monopoly/src/RailroadSquare.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/Square.java" afterPath="$PROJECT_DIR$/../Monopoly/src/Square.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/TaxSquare.java" afterPath="$PROJECT_DIR$/../Monopoly/src/TaxSquare.java" />
+      <change beforePath="$PROJECT_DIR$/../Monopoly/src/UtilitySquare.java" afterPath="$PROJECT_DIR$/../Monopoly/src/UtilitySquare.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,51 +79,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="364" selection-start-line="364" selection-end-line="364" />
+            <state relative-caret-position="17">
+              <caret line="228" column="33" lean-forward="false" selection-start-line="228" selection-start-column="33" selection-end-line="228" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#584#1766#0" />
-                <element signature="e#1773#3305#0" />
-                <element signature="e#3313#3448#0" />
+                <element signature="method#changeValue#0;class#Calculator#0" expanded="false" />
+                <element signature="method#algorithmSelection#0;class#Calculator#0" expanded="false" />
+                <element signature="class#zero#0;class#Calculator#0" expanded="false" />
                 <element signature="e#3403#3404#0" expanded="true" />
                 <element signature="e#3441#3442#0" expanded="true" />
-                <element signature="e#3454#3588#0" />
+                <element signature="class#one#0;class#Calculator#0" expanded="false" />
                 <element signature="e#3543#3544#0" expanded="true" />
                 <element signature="e#3581#3582#0" expanded="true" />
+                <element signature="class#two#0;class#Calculator#0" expanded="false" />
                 <element signature="e#3683#3684#0" expanded="true" />
                 <element signature="e#3721#3722#0" expanded="true" />
-                <element signature="e#3737#4001#0" />
+                <element signature="class#three#0;class#Calculator#0" expanded="false" />
                 <element signature="e#3956#3957#0" expanded="true" />
                 <element signature="e#3994#3995#0" expanded="true" />
-                <element signature="e#4007#4142#0" />
+                <element signature="class#four#0;class#Calculator#0" expanded="false" />
                 <element signature="e#4097#4098#0" expanded="true" />
                 <element signature="e#4135#4136#0" expanded="true" />
-                <element signature="e#4148#4283#0" />
+                <element signature="class#five#0;class#Calculator#0" expanded="false" />
                 <element signature="e#4238#4239#0" expanded="true" />
                 <element signature="e#4276#4277#0" expanded="true" />
-                <element signature="e#4289#4423#0" />
+                <element signature="class#six#0;class#Calculator#0" expanded="false" />
                 <element signature="e#4378#4379#0" expanded="true" />
                 <element signature="e#4416#4417#0" expanded="true" />
-                <element signature="e#4429#4565#0" />
+                <element signature="class#seven#0;class#Calculator#0" expanded="false" />
                 <element signature="e#4520#4521#0" expanded="true" />
                 <element signature="e#4558#4559#0" expanded="true" />
-                <element signature="e#4571#4707#0" />
+                <element signature="class#eight#0;class#Calculator#0" expanded="false" />
                 <element signature="e#4662#4663#0" expanded="true" />
                 <element signature="e#4700#4701#0" expanded="true" />
-                <element signature="e#4713#4848#0" />
+                <element signature="class#nine#0;class#Calculator#0" expanded="false" />
                 <element signature="e#4803#4804#0" expanded="true" />
                 <element signature="e#4841#4842#0" expanded="true" />
-                <element signature="e#4949#5166#0" />
-                <element signature="e#5172#5390#0" />
-                <element signature="e#5396#5617#0" />
-                <element signature="e#5623#5842#0" />
-                <element signature="e#5848#6070#0" />
-                <element signature="e#6076#6320#0" />
-                <element signature="e#6428#9586#0" />
+                <element signature="class#plus#0;class#Calculator#0" expanded="false" />
+                <element signature="class#minus#0;class#Calculator#0" expanded="false" />
+                <element signature="class#multiply#0;class#Calculator#0" expanded="false" />
+                <element signature="class#divide#0;class#Calculator#0" expanded="false" />
+                <element signature="class#equals#0;class#Calculator#0" expanded="false" />
+                <element signature="class#reset#0;class#Calculator#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -113,7 +139,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -136,10 +168,23 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,19 +196,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542246083736" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Monopoly" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -182,37 +227,92 @@
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
-      <method v="2">
+      <module />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Calculator" />
-      <module name="JohnsonDaniel_HW4" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JohnsonDaniel_HW4" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -221,13 +321,13 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
-      <list>
-        <item itemvalue="Application.Calculator" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Calculator" />
       </list>
     </recent_temporary>
   </component>
@@ -235,6 +335,9 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -252,44 +355,46 @@
       <workItem from="1542080704466" duration="294000" />
       <workItem from="1542084049356" duration="14746000" />
       <workItem from="1542246041818" duration="75000" />
+      <workItem from="1543750288812" duration="1899000" />
+      <workItem from="1543814868253" duration="29000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19958000" />
+    <option name="totallyTimeSpent" value="21886000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2563574" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Learn" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19002375" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19002375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,51 +403,151 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="364" selection-start-line="364" selection-end-line="364" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#584#1766#0" />
-            <element signature="e#1773#3305#0" />
-            <element signature="e#3313#3448#0" />
+            <element signature="method#changeValue#0;class#Calculator#0" expanded="false" />
+            <element signature="method#algorithmSelection#0;class#Calculator#0" expanded="false" />
+            <element signature="class#zero#0;class#Calculator#0" expanded="false" />
             <element signature="e#3403#3404#0" expanded="true" />
             <element signature="e#3441#3442#0" expanded="true" />
-            <element signature="e#3454#3588#0" />
+            <element signature="class#one#0;class#Calculator#0" expanded="false" />
             <element signature="e#3543#3544#0" expanded="true" />
             <element signature="e#3581#3582#0" expanded="true" />
+            <element signature="class#two#0;class#Calculator#0" expanded="false" />
             <element signature="e#3683#3684#0" expanded="true" />
             <element signature="e#3721#3722#0" expanded="true" />
-            <element signature="e#3737#4001#0" />
+            <element signature="class#three#0;class#Calculator#0" expanded="false" />
             <element signature="e#3956#3957#0" expanded="true" />
             <element signature="e#3994#3995#0" expanded="true" />
-            <element signature="e#4007#4142#0" />
+            <element signature="class#four#0;class#Calculator#0" expanded="false" />
             <element signature="e#4097#4098#0" expanded="true" />
             <element signature="e#4135#4136#0" expanded="true" />
-            <element signature="e#4148#4283#0" />
+            <element signature="class#five#0;class#Calculator#0" expanded="false" />
             <element signature="e#4238#4239#0" expanded="true" />
             <element signature="e#4276#4277#0" expanded="true" />
-            <element signature="e#4289#4423#0" />
+            <element signature="class#six#0;class#Calculator#0" expanded="false" />
             <element signature="e#4378#4379#0" expanded="true" />
             <element signature="e#4416#4417#0" expanded="true" />
-            <element signature="e#4429#4565#0" />
+            <element signature="class#seven#0;class#Calculator#0" expanded="false" />
             <element signature="e#4520#4521#0" expanded="true" />
             <element signature="e#4558#4559#0" expanded="true" />
-            <element signature="e#4571#4707#0" />
+            <element signature="class#eight#0;class#Calculator#0" expanded="false" />
             <element signature="e#4662#4663#0" expanded="true" />
             <element signature="e#4700#4701#0" expanded="true" />
-            <element signature="e#4713#4848#0" />
+            <element signature="class#nine#0;class#Calculator#0" expanded="false" />
             <element signature="e#4803#4804#0" expanded="true" />
             <element signature="e#4841#4842#0" expanded="true" />
-            <element signature="e#4949#5166#0" />
-            <element signature="e#5172#5390#0" />
-            <element signature="e#5396#5617#0" />
-            <element signature="e#5623#5842#0" />
-            <element signature="e#5848#6070#0" />
-            <element signature="e#6076#6320#0" />
-            <element signature="e#6428#9586#0" />
+            <element signature="class#plus#0;class#Calculator#0" expanded="false" />
+            <element signature="class#minus#0;class#Calculator#0" expanded="false" />
+            <element signature="class#multiply#0;class#Calculator#0" expanded="false" />
+            <element signature="class#divide#0;class#Calculator#0" expanded="false" />
+            <element signature="class#equals#0;class#Calculator#0" expanded="false" />
+            <element signature="class#reset#0;class#Calculator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#changeValue#0;class#Calculator#0" expanded="false" />
+            <element signature="method#algorithmSelection#0;class#Calculator#0" expanded="false" />
+            <element signature="class#zero#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3403#3404#0" expanded="true" />
+            <element signature="e#3441#3442#0" expanded="true" />
+            <element signature="class#one#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3543#3544#0" expanded="true" />
+            <element signature="e#3581#3582#0" expanded="true" />
+            <element signature="class#two#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="class#three#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="class#four#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4097#4098#0" expanded="true" />
+            <element signature="e#4135#4136#0" expanded="true" />
+            <element signature="class#five#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4238#4239#0" expanded="true" />
+            <element signature="e#4276#4277#0" expanded="true" />
+            <element signature="class#six#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4378#4379#0" expanded="true" />
+            <element signature="e#4416#4417#0" expanded="true" />
+            <element signature="class#seven#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4520#4521#0" expanded="true" />
+            <element signature="e#4558#4559#0" expanded="true" />
+            <element signature="class#eight#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#4700#4701#0" expanded="true" />
+            <element signature="class#nine#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4803#4804#0" expanded="true" />
+            <element signature="e#4841#4842#0" expanded="true" />
+            <element signature="class#plus#0;class#Calculator#0" expanded="false" />
+            <element signature="class#minus#0;class#Calculator#0" expanded="false" />
+            <element signature="class#multiply#0;class#Calculator#0" expanded="false" />
+            <element signature="class#divide#0;class#Calculator#0" expanded="false" />
+            <element signature="class#equals#0;class#Calculator#0" expanded="false" />
+            <element signature="class#reset#0;class#Calculator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="228" column="33" lean-forward="false" selection-start-line="228" selection-start-column="33" selection-end-line="228" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#changeValue#0;class#Calculator#0" expanded="false" />
+            <element signature="method#algorithmSelection#0;class#Calculator#0" expanded="false" />
+            <element signature="class#zero#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3403#3404#0" expanded="true" />
+            <element signature="e#3441#3442#0" expanded="true" />
+            <element signature="class#one#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3543#3544#0" expanded="true" />
+            <element signature="e#3581#3582#0" expanded="true" />
+            <element signature="class#two#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3683#3684#0" expanded="true" />
+            <element signature="e#3721#3722#0" expanded="true" />
+            <element signature="class#three#0;class#Calculator#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="class#four#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4097#4098#0" expanded="true" />
+            <element signature="e#4135#4136#0" expanded="true" />
+            <element signature="class#five#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4238#4239#0" expanded="true" />
+            <element signature="e#4276#4277#0" expanded="true" />
+            <element signature="class#six#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4378#4379#0" expanded="true" />
+            <element signature="e#4416#4417#0" expanded="true" />
+            <element signature="class#seven#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4520#4521#0" expanded="true" />
+            <element signature="e#4558#4559#0" expanded="true" />
+            <element signature="class#eight#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#4700#4701#0" expanded="true" />
+            <element signature="class#nine#0;class#Calculator#0" expanded="false" />
+            <element signature="e#4803#4804#0" expanded="true" />
+            <element signature="e#4841#4842#0" expanded="true" />
+            <element signature="class#plus#0;class#Calculator#0" expanded="false" />
+            <element signature="class#minus#0;class#Calculator#0" expanded="false" />
+            <element signature="class#multiply#0;class#Calculator#0" expanded="false" />
+            <element signature="class#divide#0;class#Calculator#0" expanded="false" />
+            <element signature="class#equals#0;class#Calculator#0" expanded="false" />
+            <element signature="class#reset#0;class#Calculator#0" expanded="false" />
           </folding>
         </state>
       </provider>
