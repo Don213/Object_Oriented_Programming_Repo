@@ -18,7 +18,14 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.*;
+
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+import java.sql.Timestamp;
+import java.util.Random;
+
 import javafx.scene.control.CheckBox;
 
 
@@ -29,6 +36,7 @@ public class Monopoly{
     private Stage window;
     private Scene scene1, scene2, scene3, scene4;
     private Player player1, player2, player3, player4, player5;
+    private int playerCounter;
     private int turnCounter;
 
     public class Rules{
@@ -94,10 +102,10 @@ public class Monopoly{
         //
         HBox introScene1 = new HBox();
         try {
-            Image monopolyLogo = new Image(new FileInputStream("Monopoly_Pics\\MonopolyLogo.jpg"));
+            Image monopolyLogo = new Image(new FileInputStream("src\\Monopoly_Pics\\MonopolyLogo.jpg"));
             ImageView monopolyLogoView = new ImageView(monopolyLogo);
 
-            Image topHatMan = new Image(new FileInputStream("Monopoly_Pics\\TopHatMan2.png"));
+            Image topHatMan = new Image(new FileInputStream("src\\Monopoly_Pics\\TopHatMan2.png"));
             ImageView topHatManView = new ImageView(topHatMan);
             //}catch(e FileNotFoundException){System.out.println();}
             //HBox introScene1 = new HBox();
@@ -212,8 +220,9 @@ public class Monopoly{
 
         //
         CheckBox r2Yes = new CheckBox("Yes");
-        r2Yes.setSelected(true);
+
         CheckBox r2No = new CheckBox("No");
+        r2No.setSelected(true);
 
         r2Yes.selectedProperty().addListener(e ->{
             if(r2Yes.isSelected()){
@@ -247,8 +256,9 @@ public class Monopoly{
 
         //
         CheckBox r3Yes = new CheckBox("Yes");
-        r3Yes.setSelected(true);
+
         CheckBox r3No = new CheckBox("No");
+        r3No.setSelected(true);
 
         r3Yes.selectedProperty().addListener(e ->{
             if(r3Yes.isSelected()){
@@ -282,8 +292,9 @@ public class Monopoly{
 
         //
         CheckBox r4Yes = new CheckBox("Yes");
-        r4Yes.setSelected(true);
+
         CheckBox r4No = new CheckBox("No");
+        r4No.setSelected(true);
 
         r4Yes.selectedProperty().addListener(e ->{
             if(r4Yes.isSelected()){
@@ -317,8 +328,9 @@ public class Monopoly{
 
         //
         CheckBox r5Yes = new CheckBox("Yes");
-        r5Yes.setSelected(false);
+        r5Yes.setSelected(true);
         CheckBox r5No = new CheckBox("No");
+
 
         r5Yes.selectedProperty().addListener(e ->{
             if(r5Yes.isSelected()){
@@ -499,6 +511,93 @@ public class Monopoly{
 
 
 
+    private BufferedReader readFileIn(String fileName) {
+        try {
+            return (new BufferedReader(new InputStreamReader(new FileInputStream(fileName))));
+        } catch (FileNotFoundException e) {
+            System.out.println("Error, File Not Found");
+        }
+        return null;
+    }
+
+
+    private int setupPlayersAndGamePieces(int counter, String name, int startingCash)
+    {
+        BufferedReader br = readFileIn("Text_Files\\pieces.txt");
+        String tempString;
+        String tempArray[] = new String[5];
+        int temp = 0;
+        int count = 0;
+        Random rand = new Random();
+
+        try {
+            while (((tempString = br.readLine()) != null)) {
+                tempArray[count] = tempString;
+                count++;
+                }
+            }catch(Exception e){System.out.println("There was and error reading the game piece text file");}
+
+
+            if(counter == 0) {
+                temp = rand.nextInt(5);
+                player1 = new Player(name, tempArray[temp],startingCash);
+            }else if(counter == 1){
+                temp = rand.nextInt(5);
+                while(tempArray[temp].equals(player1.getGamePiece()))
+                    temp = rand.nextInt(5);
+                player2 = new Player(name, tempArray[temp],startingCash);
+            }else if(counter == 2){
+                temp = rand.nextInt(5);
+                while(tempArray[temp].equals(player1.getGamePiece()) || tempArray[temp].equals(player2.getGamePiece()))
+                    temp = rand.nextInt(5);
+                player3 = new Player(name, tempArray[temp],startingCash);
+            } else if(counter == 3){
+                temp = rand.nextInt(5);
+                while(tempArray[temp].equals(player1.getGamePiece()) || tempArray[temp].equals(player2.getGamePiece()) || tempArray[temp].equals(player3.getGamePiece()))
+                    temp = rand.nextInt(5);
+                player4 = new Player(name, tempArray[temp],startingCash);
+            }else if(counter == 5){
+                temp = rand.nextInt(5);
+                while(tempArray[temp].equals(player1.getGamePiece()) || tempArray[temp].equals(player2.getGamePiece()) || tempArray[temp].equals(player3.getGamePiece()) || tempArray[temp].equals(player4.getGamePiece()))
+                    temp = rand.nextInt(5);
+                player4 = new Player(name, tempArray[temp],startingCash);
+            }else{return counter++;}
+
+
+        try {
+            br.close();
+        }catch(Exception e){System.out.println("Text file failed to close.");}
+
+        return (counter++);
+    }
+
+    private int setupPlayersAndGamePieces(int counter, String name, String gamePiece,int startingCash)
+    {
+        if(counter == 0) {
+            player1 = new Player(name,gamePiece,startingCash);
+        } else if(counter == 1) {
+            player2 = new Player(name,gamePiece,startingCash);
+        }else if(counter == 2) {
+            player3 = new Player(name,gamePiece,startingCash);
+        }else if(counter == 3) {
+            player4 = new Player(name,gamePiece,startingCash);
+        }else if(counter == 4) {
+            player5 = new Player(name,gamePiece,startingCash);
+        }
+
+
+
+
+
+
+        return (counter++);
+    }
+
+
+
+
+
+
 
 
 
@@ -511,18 +610,18 @@ public class Monopoly{
 
         Label label, label2 = new Label(), label3 = new Label(), label4;
         ComboBox comboBox = new ComboBox();
-
+        ComboBox comboBox1;
         //Will allow setting of game piece depending on past choice
         if(randomGamePieces)
         {
-            label = new Label("Please enter your name below:");
+            label = new Label("Please enter Player 1's name:");
         }else {
             label = new Label("Please enter your name below and then choose your game piece.");
 
             //list for dropdown menu
             ObservableList<String> options =
                     FXCollections.observableArrayList(
-                            "Hat",
+                            "Boot",
                             "Thimble",
                             "Battleship",
                             "Top Hat",
@@ -532,8 +631,9 @@ public class Monopoly{
             comboBox.getSelectionModel().selectFirst();
 
 
+
             //Label for name entry
-            label3.setText("Name:");
+            label3.setText("Player 1's Name:");
             label3.setTextAlignment(TextAlignment.CENTER);
             label3.setFont(Font.font(("Verdana"), FontWeight.BOLD, 15));
 
@@ -545,14 +645,8 @@ public class Monopoly{
         }
         //setup for main text on page that allows choosing of name and game piece
         label.setTextAlignment(TextAlignment.CENTER);
-        label.setFont(Font.font(("Verdana"), FontWeight.BOLD, 30));
+        label.setFont(Font.font(("Verdana"), FontWeight.BOLD, 25));
 
-        //label for button and button creation
-        label4 = new Label("Continue to Game");
-        label4.setFont(Font.font(("Verdana"), FontWeight.BOLD, 20));
-        Button continueToGame = new Button("",label4);//button that continues to the game
-        continueToGame.setOnAction(e -> playGameGUI());
-        continueToGame.setPadding(new Insets(20,20,20,20));
 
         //Text Field to enter a name. Default is "Name"
         TextField nameArea = new TextField("Name");
@@ -561,12 +655,95 @@ public class Monopoly{
 
 
 
+        comboBox1 = comboBox;
+        playerCounter = 0;
+
+        //label for button and button creation and button actions
+        label4 = new Label("Continue");
+        label4.setFont(Font.font(("Verdana"), FontWeight.BOLD, 20));
+        Button continueToGame = new Button("",label4);//button that continues to the game
+        continueToGame.setOnAction(e -> {
+            if(((playerCounter+1) < numberOfPlayers)) {
+                if (randomGamePieces) {
+                    setupPlayersAndGamePieces(playerCounter, nameArea.getText(),startingCash);
+                    nameArea.setText("Name");
+                    playerCounter++;
+                    label.setText(("Please enter Player " + (playerCounter+1) + "'s name:"));
+
+                    if(numberOfPlayers == (playerCounter+1)){
+                        label4.setText("Continue to game!");
+                    }
+
+                    //e.consume();
+                } else {
+                    String tempName = comboBox1.getValue().toString();
+                    setupPlayersAndGamePieces(playerCounter, nameArea.getText(),tempName,startingCash);
+                    ObservableList<String> options =
+                            FXCollections.observableArrayList(
+                                    "Boot",
+                                    "Thimble",
+                                    "Battleship",
+                                    "Top Hat",
+                                    "Race Car"
+                            );
+                    if(playerCounter == 0) {
+                        options.remove(options.indexOf(player1.getGamePiece()));
+                        comboBox1.setItems(options);
+                        comboBox1.getSelectionModel().selectFirst();
+                        label3.setText("Player 2's Name:");
+                        nameArea.setText("Name");
+                    } else if(playerCounter == 1){
+                        options.remove(options.indexOf(player1.getGamePiece()));
+                        options.remove(options.indexOf(player2.getGamePiece()));
+                        comboBox1.setItems(options);
+                        comboBox1.getSelectionModel().selectFirst();
+                        label3.setText("Player 3's Name:");
+                        nameArea.setText("Name");
+                    }else if(playerCounter == 2){
+                        options.remove(options.indexOf(player1.getGamePiece()));
+                        options.remove(options.indexOf(player2.getGamePiece()));
+                        options.remove(options.indexOf(player3.getGamePiece()));
+                        comboBox1.setItems(options);
+                        comboBox1.getSelectionModel().selectFirst();
+                        label3.setText("Player 4's Name:");
+                        nameArea.setText("Name");
+                    } else if(playerCounter == 3){
+                        options.remove(options.indexOf(player1.getGamePiece()));
+                        options.remove(options.indexOf(player2.getGamePiece()));
+                        options.remove(options.indexOf(player3.getGamePiece()));
+                        options.remove(options.indexOf(player4.getGamePiece()));
+                        comboBox1.setItems(options);
+                        comboBox1.getSelectionModel().selectFirst();
+                        label3.setText("Player 5's Name:");
+                        nameArea.setText("Name");
+                    }
+
+
+
+
+                    if(numberOfPlayers == (playerCounter+2)){
+                        label4.setText("Continue to game!");
+                    }
+                    playerCounter++;
+                    //e.consume();
+                }
+            }else {
+                playGameGUI();
+            }
+
+        });
+        continueToGame.setPadding(new Insets(20,20,20,20));
+
+
+
+
+
 
 
         ImageView topHatMan= new ImageView();
         //Adding Picture to make things more exciting
         try {
-            Image monopolyLogo = new Image(new FileInputStream("Monopoly_Pics\\TopHatMan.png"));
+            Image monopolyLogo = new Image(new FileInputStream("src\\Monopoly_Pics\\TopHatMan.png"));
             topHatMan = new ImageView(monopolyLogo);
         }catch(Exception e){System.out.println("A file did not load");}
         //
@@ -636,93 +813,119 @@ public class Monopoly{
 
 
 
-
-
-
-
-
-
-
     }
 
+    //dice
+    private ImageView dice1,dice2;
+    private Label diceLabel;
+    private HBox diceBox;
+    private VBox diceVBox;
+    private int dice1Value, dice2Value;
+    //
 
-    private void setInitialGameScene()
+
+
+
+    /////////////////////////////////////////////////////////////////Game Setup
+    /////////////////////////////Dice Setup
+    private void diceSetup()
     {
-
-
-
-
-        //////////////////////////////////////Dice
-        ImageView gameBoard = new ImageView();
-        ImageView dice1= new ImageView();
-        ImageView dice2= new ImageView();
+        dice1= new ImageView();
+        dice2= new ImageView();
         try {
-            Image dice12 = new Image(new FileInputStream("Monopoly_Pics\\Dice_1.gif"));
+            Image dice12 = new Image(new FileInputStream("src\\Monopoly_Pics\\Dice_1.gif"));
             dice1 = new ImageView(dice12);
-            Image dice22 = new Image(new FileInputStream("Monopoly_Pics\\Dice_1.gif"));
+            Image dice22 = new Image(new FileInputStream("src\\Monopoly_Pics\\Dice_1.gif"));
             dice2 = new ImageView(dice22);
         }catch(Exception e){System.out.println("A file did not load");}
 
-        Label diceLabel = new Label("Player 1's Turn:");
+        diceLabel = new Label((player1.getPlayerName() +"'s Turn:"));
         diceLabel.setTextAlignment(TextAlignment.RIGHT);
         diceLabel.setFont(Font.font(("Verdana"), FontWeight.BOLD, 20));
         diceLabel.setStyle("-fx-background-color: #FFFFFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
         diceLabel.setMaxSize(270,125);
         diceLabel.setPadding(new Insets(5,5,5,5));
-        //////////////////////////////////////Dice
+
+
+
+        diceBox = new HBox();
+        diceBox.setAlignment(Pos.TOP_LEFT);
+        diceBox.getChildren().addAll(dice1,dice2);
+        diceBox.setPadding(new Insets(5,5,5,5));
+        diceBox.setStyle("-fx-background-color: #00DEFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
+        diceBox.setMaxSize(270,145);
+        diceBox.setMinSize(270,145);
+
+        ////Box Contains signal for player's turn and the dice Box
+        diceVBox = new VBox();
+        diceVBox.getChildren().addAll(diceLabel, diceBox);
+        ////
+    }
+    /////////////////////////////Dice Setup
+    ///////////////////////////////////////////////////////////////////////
+    /////////////////////////////Top Panel Setup
+
+    private Label iconLabel;
+    ImageView icon1,icon2,icon3,icon4,icon5;
+    BorderPane iconOne, iconTwo, iconThree, iconFour, iconFive;
+    private Label topRowLabel;
+    private Button settingsButton;
+    private HBox settingsButtonHBox;
+    private HBox playerIconBox;
+    private HBox topRowBox;
 
 
 
 
-        //////////////////////////////////////Game Board
-        try {
-            Image board = new Image(new FileInputStream("Monopoly_Pics\\Monopoly_Game_Board2.jpg"));
-            gameBoard = new ImageView(board);
-        }catch(Exception e){System.out.println("A file did not load");}
-        //////////////////////////////////////Game Board
 
+
+    private void topPanelSetup()
+    {
 
         //////////////////////////////////////Player Icons
-        Label iconLabel = new Label("Players:");
+        iconLabel = new Label("Players:");
         iconLabel.setFont(Font.font(("Verdana"), FontWeight.BOLD, 20));
         iconLabel.setPadding(new Insets(20,20,20,20));
         iconLabel.setTextAlignment(TextAlignment.CENTER);
 
-
+        //CSS decorating for icons
         String cssBordering1 = "-fx-border-color:black ; \n" //#090a0c
                 + "-fx-border-insets:3;\n"
                 + "-fx-border-radius:7;\n"
                 + "-fx-border-width:1.0";
-
         String cssBordering2 = "-fx-border-color:red ; \n" //#090a0c
                 + "-fx-border-insets:3;\n"
                 + "-fx-border-radius:7;\n"
                 + "-fx-border-width:1.0";
+        //
 
-
-        ImageView icon1= new ImageView(),icon2= new ImageView(),icon3= new ImageView(),icon4= new ImageView(),icon5 = new ImageView();
+        icon1= new ImageView();
+        icon2= new ImageView();
+        icon3= new ImageView();
+        icon4= new ImageView();
+        icon5 = new ImageView();
         Image icon12;
         Image icon22;
         Image icon32;
         Image icon42;
         Image icon52;
 
-        BorderPane iconOne = new BorderPane();
-        BorderPane iconTwo = new BorderPane();
-        BorderPane iconThree = new BorderPane();
-        BorderPane iconFour = new BorderPane();
-        BorderPane iconFive = new BorderPane();
+        iconOne = new BorderPane();
+        iconTwo = new BorderPane();
+        iconThree = new BorderPane();
+        iconFour = new BorderPane();
+        iconFive = new BorderPane();
 
         try {
-            icon12 = new Image(new FileInputStream("Monopoly_Pics\\Top_Hat.jpg"));
+            icon12 = new Image(new FileInputStream("src\\Monopoly_Pics\\Top_Hat.jpg"));
             icon1 = new ImageView(icon12);
-            icon22 = new Image(new FileInputStream("Monopoly_Pics\\Thimble.jpg"));
+            icon22 = new Image(new FileInputStream("src\\Monopoly_Pics\\Thimble.jpg"));
             icon2 = new ImageView(icon22);
-            icon32 = new Image(new FileInputStream("Monopoly_Pics\\Racecar.jpg"));
+            icon32 = new Image(new FileInputStream("src\\Monopoly_Pics\\Racecar.jpg"));
             icon3 = new ImageView(icon32);
-            icon42 = new Image(new FileInputStream("Monopoly_Pics\\Boot.jpg"));
+            icon42 = new Image(new FileInputStream("src\\Monopoly_Pics\\Boot.jpg"));
             icon4 = new ImageView(icon42);
-            icon52 = new Image(new FileInputStream("Monopoly_Pics\\BattleShip.jpg"));
+            icon52 = new Image(new FileInputStream("src\\Monopoly_Pics\\BattleShip.jpg"));
             icon5 = new ImageView(icon52);
 
 
@@ -762,62 +965,203 @@ public class Monopoly{
 
 
         //////////////////////////////////////Settings Button
-        Label topRowLabel = new Label("Settings");
+        topRowLabel = new Label("Settings");
         topRowLabel.setTextAlignment(TextAlignment.RIGHT);
         topRowLabel.setFont(Font.font(("Verdana"), FontWeight.BOLD, 25));
 
-
+        //Decorating button
         String cssBordering3 = "-fx-border-color:black ; \n" //#090a0c
                 + "-fx-border-insets:3;\n"
                 + "-fx-border-radius:7;\n"
                 + "-fx-border-width:1.0";
+        //
 
-
-        Button settingsButton = new Button("",topRowLabel);
+        settingsButton = new Button("",topRowLabel);
         settingsButton.setPadding(new Insets(25,25,25,25));
         settingsButton.setStyle(cssBordering3);
 
 
-        HBox settingsButtonHBox = new HBox();
+        settingsButtonHBox = new HBox();
         settingsButtonHBox.getChildren().add(settingsButton);
         settingsButtonHBox.setPadding(new Insets(0,0,0,20));
 
 
-        HBox playerIconBox = new HBox();
+        playerIconBox = new HBox();
         playerIconBox.getChildren().addAll(iconLabel,iconOne,iconTwo,iconThree,iconFour,iconFive);
         playerIconBox.setStyle("-fx-background-color: #00DEFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
         playerIconBox.setMaxSize(500,90);
         playerIconBox.setMinSize(500,90);
-        //playerIconBox.setAlignment(Pos.BASELINE_RIGHT);
         playerIconBox.setPadding(new Insets(5,5,5,5));
         //////////////////////////////////////Settings Button
 
 
-        //Contains the player icon section and the settings button
-        HBox topRowBox = new HBox();
+
+
+
+
+        ////Contains the player icon section and the settings button
+        topRowBox = new HBox();
         topRowBox.getChildren().addAll(playerIconBox,settingsButtonHBox);
+        ////
+
+
+
+    }
+    /////////////////////////////Top Panel Setup
+
+
+
+
+    /////////////////////////////////////////////////////////////////Game Setup
+    private void setInitialGameScene()
+    {
+
+
+        //Roll Dice Button
+        Label rollDiceLabel = new Label("Roll Dice");
+        rollDiceLabel.setFont(Font.font(("Verdana"), FontWeight.BOLD, 25));
+
+        Button rollDice = new Button("",rollDiceLabel);
+        rollDice.setPadding(new Insets(25,30,25,30));
+
+        HBox rollDiceButtonBox = new HBox();//add to side panel
+        rollDiceButtonBox.getChildren().addAll(rollDice);
+        rollDiceButtonBox.setPadding(new Insets(10,10,10,10));
+        //Roll Dice Button
+
+
+        //End Turn Button
+        Label endTurnLabel = new Label("End Turn");
+        endTurnLabel.setFont(Font.font(("Verdana"), FontWeight.BOLD, 25));
+
+        Button endTurn = new Button("",endTurnLabel);
+        endTurn.setPadding(new Insets(25,30,25,30));
+
+        HBox endTurnButtonBox = new HBox();//add to side panel
+        endTurnButtonBox.getChildren().addAll(endTurn);
+        endTurnButtonBox.setPadding(new Insets(10,10,10,10));
+        //End Turn Button
+
+
+
+        //Action log that records what happens
+        TextArea actionLog = new TextArea();
+        actionLog.setEditable(false);
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        actionLog.setText(timestamp.toString());
+        actionLog.setPadding(new Insets(5,5,5,5));
+
+        VBox actionLogVBox = new VBox();
+        actionLogVBox.getChildren().addAll(actionLog);
+        actionLogVBox.setAlignment(Pos.CENTER);
+        actionLogVBox.setPadding(new Insets(10,10,20,10));
+        actionLogVBox.setMaxSize(240,50);
+        actionLogVBox.setMinSize(240,50);
+        //Action log that records what happens
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Money Amount
+        Label money = new Label("Money: ");
+        money.setFont(Font.font(("Verdana"), FontWeight.BOLD, 20));
+        money.setTextAlignment(TextAlignment.CENTER);
+
+        Label moneyAmount = new Label(Integer.toString(player1.getMoney()));
+        moneyAmount.setFont(Font.font(("Verdana"), 15));
+        moneyAmount.setTextAlignment(TextAlignment.CENTER);
+
+        HBox moneyHBox = new HBox();
+        moneyHBox.setStyle("-fx-background-color: #FFFFFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
+        moneyHBox.getChildren().addAll(money, moneyAmount);
+        moneyHBox.setMaxSize(195,50);
+        moneyHBox.setMinSize(195,50);
+        moneyHBox.setAlignment(Pos.BASELINE_CENTER);
+
+        VBox moneyVBox = new VBox();//add to side panel
+        moneyVBox.getChildren().addAll(moneyHBox);
+        moneyVBox.setPadding(new Insets(10,20,10,20));
+        //Money Amount
+
+
+
+
+
+
+
+
+
+
+
+        Label propertyLabel = new Label("Owned Properties:");
+        propertyLabel.setFont(Font.font(("Verdana"), FontWeight.BOLD, 15));
+
+        HBox propertyLabelHBox = new HBox();
+        propertyLabelHBox.getChildren().add(propertyLabel);
+        propertyLabelHBox.setStyle("-fx-background-color: #FFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
+        propertyLabelHBox.setPadding(new Insets(5,5,5,5));
+
+
+
+
+
+        GridPane propertyGrid = new GridPane();
+        propertyGrid.setPadding(new Insets(20,5,5,5));
+        propertyGrid.setMaxSize(210, 180);
+        propertyGrid.setMinSize(210, 180);
+        propertyGrid.setAlignment(Pos.CENTER);
+        propertyGrid.setStyle("-fx-background-color: #DEDEDE; -fx-border-color: #FFF; -fx-border-width: 5px");
+
+
+
+        //VBox for the property display
+        VBox propertyVBox = new VBox();//Add to side panel
+        propertyVBox.getChildren().addAll(propertyLabelHBox, propertyGrid);
+        propertyVBox.setAlignment(Pos.CENTER);
+        propertyVBox.setStyle("-fx-background-color: #FFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
+        propertyVBox.setPadding(new Insets(10,10,10,10));
         //
 
 
 
-        //Box contains the Dice
-        HBox diceBox = new HBox();
-        diceBox.setAlignment(Pos.TOP_LEFT);
-        diceBox.getChildren().addAll(dice1,dice2);
-        diceBox.setPadding(new Insets(5,5,5,5));
-        diceBox.setStyle("-fx-background-color: #00DEFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
-        diceBox.setMaxSize(270,145);
-        diceBox.setMinSize(270,145);
-        //
 
 
 
-        //Box Contains signal for player's turn and the dice Box
-        VBox diceVBox = new VBox();
-        diceVBox.getChildren().addAll(diceLabel, diceBox);
-        //
 
-        //Grid section for whole layout
+
+
+
+        //Side Panel
+        VBox sidePanelVBox = new VBox();//add to grid
+        sidePanelVBox.setStyle("-fx-background-color: #00DEFF; -fx-border-color: #FF0000; -fx-border-width: 5px");
+        sidePanelVBox.setMaxSize(270,600);
+        sidePanelVBox.setMinSize(270,600);
+        sidePanelVBox.getChildren().addAll(rollDiceButtonBox,endTurnButtonBox,moneyVBox,actionLogVBox,propertyVBox);
+        sidePanelVBox.setPadding(new Insets(10,10,10,10));
+        rollDiceButtonBox.setAlignment(Pos.CENTER);
+        endTurnButtonBox.setAlignment(Pos.CENTER);
+        moneyVBox.setAlignment(Pos.CENTER);
+        //Side Panel
+
+
+
+
+
+
+        diceSetup();
+        topPanelSetup();
+
+
+        ////Grid section for whole layout
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(10,10,10,10));
         grid.setVgap(10);
@@ -827,62 +1171,50 @@ public class Monopoly{
 
         grid.getRowConstraints().add(new RowConstraints(90));
         grid.getRowConstraints().add(new RowConstraints(90));
-        grid.getRowConstraints().add(new RowConstraints(520));
-        //Monopoly_Pics\Monopoly_Game_Board2.jpg
-        String cssBackground1 = "-fx-background-image: url(./Monopoly_Pics/SceneBackground.jpg);" +
-            "background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */\n" +
-            "        -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */\n" +
-            "        -moz-background-size: cover; /* optional for Firefox 3.6 */ \n" +
-            "        -o-background-size: cover; /* for Opera 9.5 */\n" +
-            "        margin: 0; /* to remove the default white margin of body */\n" +
-            "        padding: 0; /* to remove the default white margin of body */\n" +
-            "        overflow: hidden;";
+        grid.getRowConstraints().add(new RowConstraints(600));
+        ////
 
-        String cssBackground2 = "-fx-background-image: url(Monopoly_Game_Board2.jpg);" +
-                "background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */\n" +
-                "        -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */\n" +
-                "        -moz-background-size: cover; /* optional for Firefox 3.6 */ \n" +
-                "        -o-background-size: cover; /* for Opera 9.5 */\n" +
-                "        margin: 0; /* to remove the default white margin of body */\n" +
-                "        padding: 0; /* to remove the default white margin of body */\n" +
-                "        overflow: hidden;";
+
+
+        ///////////////////////////////////////Game Board
+        String cssBackground2 =
+                "-fx-background-image: url(Monopoly_Pics/Monopoly_Game_Board2.jpg);\n" +
+                        "    -fx-background-repeat: stretch;\n" +
+                        "    -fx-background-size:700 700;\n" +
+                        "    -fx-background-position: center center;\n" +
+                        "    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);\n";
+
 
         GridPane backgroundPane = new GridPane();
         backgroundPane.setStyle(cssBackground2);
+        ///////////////////////////////////////Game Board
 
 
+        //Setting Outer Pane
         GridPane.setConstraints(topRowBox,1,0,1,1);
         GridPane.setConstraints(diceVBox,0,0,1,2);
         GridPane.setConstraints(backgroundPane,1,1,1,3);
+        GridPane.setConstraints(sidePanelVBox, 0,2, 1,2);
 
 
-
-        grid.getChildren().addAll(diceVBox,backgroundPane,topRowBox);
-        grid.setStyle("-fx-background-color: #65CCFF; -fx-border-color: #000000; -fx-border-width: 5px");
-        //grid.setStyle(cssBackground1);
-        //
+        grid.getChildren().addAll(diceVBox,backgroundPane,topRowBox,sidePanelVBox);
+        String cssBackground1 =
+                "-fx-background-image: url(Monopoly_Pics/SceneBackground.jpg);\n" +
+                        "    -fx-background-repeat: stretch;\n" +
+                        "    -fx-background-size:cover;\n" +
+                        "    -fx-background-position: center center;\n" +
+                        "    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);\n";
+        grid.setStyle(cssBackground1);
 
         scene4 = new Scene(grid, 1020, 830);
 
-
         window.setScene(scene4);
         window.centerOnScreen();
-        window.setResizable(false);
+        window.setResizable(true);
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    /////////////////////////////////////////////////////////////////Game Setup
 
 
 

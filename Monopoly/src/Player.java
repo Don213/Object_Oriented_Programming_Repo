@@ -10,15 +10,33 @@ public class Player {
 
 
 
-    Player(String playerName, String gamePiece, Square currentSpace)
+    Player(String playerName, String gamePiece, Square currentSpace, int startingCash)
     {
         this.playerName = playerName;
         this.gamePiece = gamePiece;
         this.currentSpace = currentSpace;
-        this.money = 1500;
-        this.ownedProperty = new Square[40];
+        this.money = startingCash;
+        this.ownedProperty = new Square[28];
         this.stillPlaying = true;
 
+    }
+
+    Player(String playerName, String gamePiece)
+    {
+        this.playerName = playerName;
+        this.gamePiece = gamePiece;
+        this.ownedProperty = new Square[28];
+        this.stillPlaying = true;
+
+    }
+
+    Player(String playerName, String gamePiece, int startingCash)
+    {
+        this.playerName = playerName;
+        this.gamePiece = gamePiece;
+        this.money = startingCash;
+        this.ownedProperty = new Square[28];
+        this.stillPlaying = true;
     }
 
 
@@ -34,7 +52,7 @@ public class Player {
     {
         this.playerName = playerName;
     }
-    public String playerName()
+    public String getPlayerName()
     {
         return playerName;
     }
