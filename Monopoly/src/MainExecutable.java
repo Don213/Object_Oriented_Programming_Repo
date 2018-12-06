@@ -26,11 +26,6 @@ public class MainExecutable extends Application{
     private Scene scene1,scene2, scene3, scene4;
 
 
-
-
-
-
-
     public static void main(String[] args)
     {
         launch(args);
