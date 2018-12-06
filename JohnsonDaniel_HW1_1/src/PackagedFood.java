@@ -55,13 +55,6 @@ public class PackagedFood extends Food implements Cloneable
 
 
     //1-2-a
-    //This method returns the name of the class
-    public String getName()
-    {
-        return "PackagedFood";
-    }
-
-    //1-2-a
     //This method returns the PackagedFood object in string form
     public String toString()
     {

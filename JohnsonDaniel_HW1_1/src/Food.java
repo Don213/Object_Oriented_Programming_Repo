@@ -42,19 +42,14 @@ public class Food implements Cloneable
         return units;
     }
 
+
+
+
+
     //1-2-a
-    public String getName()
-    {
-        return "Food";
-    }
-
-
-    //My methods
-
-
     public String toString()
     {
-        return (getName() + "[Brand: " + getBrand() + ", " + "Product Name: " + getProductName()
+        return (this.getClass().getSimpleName() + "[Brand: " + getBrand() + ", " + "Product Name: " + getProductName()
                 + ", " + "Units: " + getUnits() + "]");
     }
 

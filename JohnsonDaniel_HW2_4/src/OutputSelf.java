@@ -44,7 +44,7 @@ public class OutputSelf{
 
     public static void main(String[] args)
     {
-        String txtFileName = "ProgramText.txt";
+        String txtFileName = "src\\OutputSelf.java";
         readFromFile(txtFileName);
     }
 }

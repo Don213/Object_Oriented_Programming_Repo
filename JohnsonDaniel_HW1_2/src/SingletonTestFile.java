@@ -25,9 +25,13 @@ public class SingletonTestFile {//TEST FILE
 
         if(food1.equals(food2))
         {
+            System.out.println();
             System.out.println("These two instances are equal");
         }
-        else{System.out.println("These two instances are not equal");}
+        else {
+            System.out.println();
+            System.out.println("These two instances are not equal");
+        }
 
 
 

@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="555ce213-d1bd-40d2-8f11-0e2ea27e5626" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$divide.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$divide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$eight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$eight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$equals.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$equals.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$five.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$five.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$four.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$four.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$minus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$minus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$multiply.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$multiply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$nine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$nine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$one.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$one.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$plus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$plus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$reset.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$seven.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$seven.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$six.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$six.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$three.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$three.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$two.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$two.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$zero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator$zero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JohnsonDaniel_HW4/Calculator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,20 +16,33 @@
     <session id="-2129819080">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1147" />
+          <entry key="java" value="1156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1147" />
+          <entry key="JAVA" value="1156" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -56,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="364" selection-start-line="364" selection-end-line="364" />
+            <state relative-caret-position="590">
+              <caret line="358" column="29" selection-start-line="358" selection-start-column="29" selection-end-line="358" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#584#1766#0" />
@@ -147,18 +143,23 @@
               <item name="JohnsonDaniel_HW4" type="b2602c69:ProjectViewProjectNode" />
               <item name="JohnsonDaniel_HW4" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JohnsonDaniel_HW4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JohnsonDaniel_HW4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542246083736" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542680540617" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -177,11 +178,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Calculator">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Calculator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Calculator" />
+      <module name="JohnsonDaniel_HW4" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -225,9 +235,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Calculator" />
+      <item itemvalue="Application.Calculator (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Calculator" />
+        <item itemvalue="Application.Calculator (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -252,16 +267,20 @@
       <workItem from="1542080704466" duration="294000" />
       <workItem from="1542084049356" duration="14746000" />
       <workItem from="1542246041818" duration="75000" />
+      <workItem from="1542675588052" duration="1564000" />
+      <workItem from="1542680324596" duration="650000" />
+      <workItem from="1542694116769" duration="187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19958000" />
+    <option name="totallyTimeSpent" value="22359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2563574" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26666668" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Learn" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -299,10 +318,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../../Johnson_4/Johnson_4/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="364" selection-start-line="364" selection-end-line="364" />
+        <state relative-caret-position="590">
+          <caret line="358" column="29" selection-start-line="358" selection-start-column="29" selection-end-line="358" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#584#1766#0" />

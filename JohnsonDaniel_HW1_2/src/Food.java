@@ -72,14 +72,10 @@ public class Food implements Cloneable
 
     ////////////////////////////////////////
     //My methods
-    public String getName()
-    {
-        return "Food";
-    }
 
     public String toString()
     {
-        return (getName() + "[Brand: " + getBrand() + ", " + "Product Name: " + getProductName()
+        return (this.getClass().getSimpleName() + "[Brand: " + getBrand() + ", " + "Product Name: " + getProductName()
                 + ", " + "Units: " + getUnits() + "]");
     }
 
