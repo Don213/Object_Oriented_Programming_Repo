@@ -19,7 +19,13 @@ import java.awt.*;
 import java.io.FileInputStream;
 import javafx.scene.control.CheckBox;
 
-
+////////////////////////////////////////////////
+// I chose to use javafx because the swing library
+// wasn't working how I liked it. The application
+// extension and passthrough to monopoly object is
+// all that is needed to start the GUI
+//
+////////////////////////////////////////////////
 public class MainExecutable extends Application{
 
     private Stage window;
@@ -36,7 +42,7 @@ public class MainExecutable extends Application{
         window = primaryStage;
         window.setTitle("Monopoly");
 
-        new Monopoly(window, scene1, scene2, scene3, scene4);
+        Monopoly monopoly = new Monopoly(window, scene1, scene2, scene3, scene4);
 
 
     }

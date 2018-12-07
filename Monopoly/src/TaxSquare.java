@@ -2,6 +2,11 @@ public class TaxSquare extends Square {
 
     private int rent;
 
+    //default constructor
+    TaxSquare(){
+
+    }
+    //constructor
     TaxSquare(String name, int squareType, int rent)
     {
         super(name, squareType);
@@ -11,7 +16,7 @@ public class TaxSquare extends Square {
 
 
 
-
+    //rent get and set
     public int getRent()
     {
         return rent;
@@ -21,9 +26,10 @@ public class TaxSquare extends Square {
         this.rent = rent;
     }
 
+    /*used for testing purposes
     public String toString()
     {
         return super.toString() + "[rent: " + rent + "]";
     }
-
+*/
 }
