@@ -7,37 +7,36 @@ public class Square {
     private Square next;
     private Square last;
     private String name;
-
+    private int squareNumber;
+    private int gridNumber;
     private int squareType;
 
 
-    public Square()
-    {
-    //this.next = null;
-    //his.last = null;
+    //method to help read in files
+    public BufferedReader readFileIn(String fileName) {
+        try {
+            return (new BufferedReader(new InputStreamReader(new FileInputStream(fileName))));
+        } catch (FileNotFoundException e) {
+            System.out.println("Error, File Not Found");
+        }
+        return null;
     }
 
+
+    //default constructor
+    public Square()
+    {
+
+    }
+
+    //constructor
     public Square(String name, int squareType)
     {
         this.name = name;
         this.squareType = squareType;
-        //this.next = null;
-        //this.last = null;
-        //setHead(this);
     }
 
-    public Square addSquare(String name, int squareType, Square last)
-    {
-        Square temp = new Square();
-
-        last.setNext(temp);
-
-        temp.setName(name);
-        temp.last = last;
-        temp.squareType = squareType;
-        return temp;
-    }
-
+    //constructs the linked list of square objects stored in the monopoly class
     public void constructLinkedList(Square head, String fileName)
     {
         BufferedReader in = readFileIn(fileName);
@@ -54,7 +53,9 @@ public class Square {
             head.setName(tempList[1]);
             head.setSquareType(Integer.parseInt(tempList[0]));
             setHead(head);
-
+            head.setGridNumber(0);
+            int counter = 0;
+            int counter2 = 0;
 
 
             while (((tempString = in.readLine()) != null)) {
@@ -79,7 +80,7 @@ public class Square {
                 else if(Integer.parseInt(tempList[0]) == 4)
                 {
                     tempSquare = head;
-                    head.setNext(new RailroadSquare(tempList[1], (int)Float.parseFloat(tempList[0]), (int)Float.parseFloat(tempList[2]), (int)Float.parseFloat(tempList[3])));
+                    head.setNext(new RailroadSquare(tempList[1], (int)Float.parseFloat(tempList[0]), (int)Float.parseFloat(tempList[3]), (int)Float.parseFloat(tempList[2])));
                 }
                 else
                 {
@@ -87,6 +88,8 @@ public class Square {
                     head.setNext(new UtilitySquare(tempList[1], (int)Float.parseFloat(tempList[0]), (int)Float.parseFloat(tempList[2]), (int)Float.parseFloat(tempList[3])));
                 }
                 head = head.getNext();
+                counter = setSquareNumberAndGridNumber(head, counter, counter2);
+                counter2++;
                 head.setLast(tempSquare);
             }
 
@@ -101,19 +104,11 @@ public class Square {
     }
 
 
-    public BufferedReader readFileIn(String fileName) {
-        try {
-            return (new BufferedReader(new InputStreamReader(new FileInputStream(fileName))));
-        } catch (FileNotFoundException e) {
-            System.out.println("Error, File Not Found");
-        }
-        return null;
-    }
 
 
 
 
-    //
+    //get and set for next
     public Square getNext()
     {
         return next;
@@ -123,7 +118,7 @@ public class Square {
         next = data;
     }
 
-    //
+    //get and set for last
     public Square getLast()
     {
         return last;
@@ -133,7 +128,7 @@ public class Square {
         last = data;
     }
 
-    //
+    //get and set for name
     public String getName()
     {
         return name;
@@ -143,7 +138,7 @@ public class Square {
         this.name = name;
     }
 
-    //
+    //get and set for square type
     public int getSquareType()
     {
         return squareType;
@@ -154,7 +149,7 @@ public class Square {
     }
 
 
-    //
+    //get and set for head
     public Square getHead()
     {
         return head;
@@ -164,41 +159,58 @@ public class Square {
         head = data;
     }
 
-    //
+
+    //get and set for square number
+    private void setSquareNumber(int squareNumber)
+    {
+        this.squareNumber = squareNumber;
+    }
+    public int getSquareNumber()
+    {
+        return squareNumber;
+    }
+
+    //get and set for grid number. Used when referencing where to place players on the grid/board
+    private void setGridNumber(int gridNumber)
+    {
+        this.gridNumber = gridNumber;
+    }
+    public int getGridNumber()
+    {
+        return gridNumber;
+    }
+
+
+    //sets up the square number and the grid number.
+    private int setSquareNumberAndGridNumber(Square current, int counter, int counter2)
+    {
+
+        current.setGridNumber(counter2 + 1);
+
+
+        if(current.getClass().getSimpleName().equals("PropertySquare") || current.getClass().getSimpleName().equals("RailroadSquare") ||current.getClass().getSimpleName().equals("UtilitySquare"))
+        {
+            current.setSquareNumber(counter);
+            counter = counter+1;
+        } else{current.setSquareNumber(-1);}
+
+
+        return counter;
+    }
+
+
+
+
+
+
+
+/*
+    //used for testing purposes
     public String toString()
     {
         return (getClass().getSimpleName() + "[name: " + name + ", squareType: " + squareType + ", nextName: " + next.getName() + ", lastName: " + last.getName() + "]");
     }
-
-
-
-    //
-    public Square findLink(String name)
-    {
-        Square original = this;
-        Square temp;
-        temp = this;
-        int count = 0;
-        while(!temp.getName().equals(name))
-        {
-            temp = this.getNext();
-            if(count > 39) {
-                return null;
-            }
-            count++;
-        }
-        return temp;
-    }
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 }

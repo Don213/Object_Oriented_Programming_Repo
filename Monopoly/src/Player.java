@@ -1,15 +1,23 @@
+import javafx.scene.image.ImageView;
+
 public class Player {
 
-    private String playerName;
-    private String gamePiece;
-    private Square currentSpace;
-    private int money;
-    private int propertyCounter;
-    private Square[] ownedProperty;
-    private boolean stillPlaying;
+    private String playerName;//stores name
+    private String gamePiece;//stores game piece
+    private Square currentSpace;//stores current square object
+    private int money;//stores amount of money
+    private int propertyCounter; //counts their property amounts
+    private Square[] ownedProperty; //holds all of their properties
+    private boolean stillPlaying; //finds out if they are still playing (not used because that feature was not finished
+    private int currentJailTime; //holds the amount of time a player has left in jail
 
+    //Default constructor for when it is needed to do initialization
+    Player()
+    {
 
+    }
 
+    //More constructors
     Player(String playerName, String gamePiece, Square currentSpace, int startingCash)
     {
         this.playerName = playerName;
@@ -20,7 +28,7 @@ public class Player {
         this.stillPlaying = true;
 
     }
-
+    //
     Player(String playerName, String gamePiece)
     {
         this.playerName = playerName;
@@ -29,7 +37,7 @@ public class Player {
         this.stillPlaying = true;
 
     }
-
+    //
     Player(String playerName, String gamePiece, int startingCash)
     {
         this.playerName = playerName;
@@ -40,14 +48,18 @@ public class Player {
     }
 
 
-    public void checkLoss()
-    {
-        if(money <= 0)
-        {
-            stillPlaying = false;
-        }
+    //jail get/set
+    public int getCurrentJailTime() {
+        return currentJailTime;
+    }
+    public void setCurrentJailTime(int jailTime){
+        this.currentJailTime = jailTime;
     }
 
+
+
+
+    //name get/set
     public void setPlayerName(String playerName)
     {
         this.playerName = playerName;
@@ -57,6 +69,7 @@ public class Player {
         return playerName;
     }
 
+    //game piece get/set
     public void setGamePiece(String gamePiece)
     {
         this.gamePiece = gamePiece;
@@ -66,7 +79,8 @@ public class Player {
         return gamePiece;
     }
 
-    public void setCurrentSpace()
+    //current space get/set
+    public void setCurrentSpace(Square currentSpace)
     {
         this.currentSpace = currentSpace;
     }
@@ -75,6 +89,7 @@ public class Player {
         return currentSpace;
     }
 
+    //money get/set
     public void setMoney(int money)
     {
         this.money = money;
@@ -84,6 +99,7 @@ public class Player {
         return money;
     }
 
+    //still Playing get/set
     public void setStillPlaying(boolean tf)
     {
         stillPlaying = tf;
@@ -93,9 +109,92 @@ public class Player {
         return stillPlaying;
     }
 
+
+    //adds a property to property list
     public void addToProperty(Square current)
     {
-        ownedProperty[propertyCounter] = current;
+        ownedProperty[current.getSquareNumber()] = current;
         propertyCounter++;
     }
+
+    //checks to see if this person has a certain property
+    public boolean hasProperty(Square square)
+    {
+        for(int i = 0; i < 28; i++){
+            if(ownedProperty[i] != null && ownedProperty[i].equals(square)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //counts railroads for checking what the price should be to charge a player rent
+    public int countRailRoads(){
+        int count = 0;
+        for(int i = 0; i < 28; i++){
+            if(ownedProperty[i] != null && ownedProperty[i].getClass().getSimpleName().equals("RailroadSquare")){
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    //get for owned properties
+    public Square [] getOwnedProperties()
+    {
+        return ownedProperty;
+    }
+
+
+    //finds the amount of spaces in-between the current property and a string search for another
+    public int findPropertyDifference(String name)
+    {
+        Square temp = getCurrentSpace();
+        int counter = 0;
+        for(int i = 0; i < 40; i++) {
+            temp = temp.getNext();
+            counter++;
+            if(temp.getName().equals(name))
+            {
+                return counter;
+            }
+        }
+        return counter;
+    }
+
+    //finds the nearest utility to the player
+    public int findNearestUtility()
+    {
+        Square temp = getCurrentSpace();
+        int counter = 0;
+        for(int i = 0; i < 40; i++) {
+            temp = temp.getNext();
+            counter++;
+            if(temp.getClass().getSimpleName().equals("UtilitySquare"))
+            {
+                return counter;
+            }
+        }
+        return counter;
+    }
+
+
+    //find the nearest railroad to the player
+    public int findNearestRailroad()
+    {
+        Square temp = getCurrentSpace();
+        int counter = 0;
+        for(int i = 0; i < 40; i++) {
+            temp = temp.getNext();
+            counter++;
+            if(temp.getClass().getSimpleName().equals("RailroadSquare"))
+            {
+                return counter;
+            }
+        }
+        return counter;
+    }
+
+
 }
